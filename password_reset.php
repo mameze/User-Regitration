@@ -42,8 +42,8 @@ if ($stmt->affected_rows > 0) {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'devvsteeve@gmail.com';
-        $mail->Password = 'oixc hicq iweq urmb';    
+        $mail->Username = '';
+        $mail->Password = '';    
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 465;
 
