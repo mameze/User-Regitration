@@ -4,6 +4,7 @@ use PHPMailer\PHPMailer\Exception;
 
 require __DIR__ . '/vendor/autoload.php'; 
 
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -42,8 +43,8 @@ if ($stmt->affected_rows > 0) {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = '';
-        $mail->Password = '';    
+        $mail->Username = $_ENV['MAIL_USERNAME'];
+        $mail->Password = $_ENV['MAIL_PASSWORD'];    
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 465;
 
